@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "start-public": "tsc && concurrently \"npm run tsc:w\" \"npm run lite-start\" ",
+    "startpublic": "tsc && concurrently \"npm run tsc:w\" \"npm run lite-start\" ",
     "lite": "lite-server",
-    "lite-public": "lite-server -c liteconfig.js",
+    "litepublic": "lite-server -c liteconfig.json",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",

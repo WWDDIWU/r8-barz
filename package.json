@@ -1,6 +1,6 @@
 {
   "name": "r8-barz",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/r8-barz"
@@ -18,15 +18,24 @@
     "should": "^8.4.0"
   },
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp-changed": "^1.3.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-notify-growl": "^1.0.2",
     "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.5",
     "gulp-uglifyjs": "^0.6.2",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "tslint": "^3.10.2"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "6.2.0"
   }
 }

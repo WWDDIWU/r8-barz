@@ -41,3 +41,4 @@ client/src/typings
 # js and map files
 client/src/**/*.js.map
 client/src/**/*.js
+!client/src/systemjs.config.js
