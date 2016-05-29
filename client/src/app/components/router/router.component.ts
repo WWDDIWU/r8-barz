@@ -3,6 +3,7 @@ import {Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/rout
 import {HTTP_PROVIDERS} from '@angular/http'
 
 import {LoginComponent} from './../login/login.component'
+import {LoginCompleteComponent} from './../login-complete/login-complete.component'
 import {SearchComponent} from './../search/search.component'
 import {MdToolbar} from '@angular2-material/toolbar'
 
@@ -16,6 +17,10 @@ import {MdToolbar} from '@angular2-material/toolbar'
     {
         path: '/login',
         component: LoginComponent
+    },
+    {
+        path: '/login/complete',
+        component: LoginCompleteComponent
     },
     {
         path: '/search',
