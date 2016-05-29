@@ -1,0 +1,7 @@
+<md-card>
+    <md-card-title>Search</md-card-title>
+    <md-card-content>
+        <search-box (update)="term = $event"></search-box>
+    </md-card-content>
+</md-card>
+<business-component *ngFor="let business of (businesses | search : [term])" [business]="business"></business-component>
