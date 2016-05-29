@@ -82,7 +82,7 @@ gulp.task('libs-frontend', ['clean-frontend'], function() {
         .pipe(gulp.dest("client/public/node_modules"));
 });
 
-gulp.task('build-frontend', ['clean-frontend', 'transpile-prod-frontend', 'copy-frontend', 'libs-frontend', 'sass'];
+gulp.task('build-frontend', ['clean-frontend', 'transpile-prod-frontend', 'copy-frontend', 'libs-frontend', 'sass']);
 
 gulp.task('build-dev-frontend', ['clean-frontend', 'transpile-dev-frontend', 'copy-frontend', 'libs-frontend', 'sass']);
 
