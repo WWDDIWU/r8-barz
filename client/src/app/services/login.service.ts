@@ -1,16 +1,19 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Business} from './../models/business.model';
+import {Http, Response, URLSearchParams} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/catch'
 
 @Injectable()
-export class SearchService {
+export class LoginService {
     constructor (private http: Http) {}
-    private searchUrl = 'api/businesses';  // URL to web API
-    getBusinesses(): Observable<Business[]> {
-        return this.http.get(this.searchUrl)
+    private loginUrl = 'api/login';  // URL to web API
+    login(username: string, password: string): Observable<any> {
+        let creds = JSON.stringify({
+            'username': username,
+            'password': password
+        });
+        return this.http.post(this.loginUrl, creds)
             .map(this.extractData)
             .catch(this.handleError);
     }
