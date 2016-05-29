@@ -4,7 +4,7 @@ const should = require('should');
 
 const User = require('../lib/User');
 
-describe('Testing getters, setters', function() {
+describe('User - Testing getters, setters', function() {
     const mock = {
         id: "1",
         name: "Test",
@@ -40,9 +40,8 @@ describe('Testing getters, setters', function() {
         }
 
         user.getCheckIns().should.be.with.lengthOf(0);
-
         user.addCheckIn("test");
-
+        user.getCheckIns().should.be.with.lengthOf(1);
         user.getCheckIns()[0].should.be.equal("test");
     });
 });
