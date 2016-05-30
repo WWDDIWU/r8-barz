@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client', 'public')));
-
 app.use('/api', api);
 
 // catch 404 and forward to error handler
@@ -53,5 +52,8 @@ app.use(function(err, req, res, next) {
 	});
 });
 
+process.on('beforeExit', () => {
+    console.log('tolate');
+});
 
 module.exports = app;

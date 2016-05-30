@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch'
 @Injectable()
 export class SearchService {
     constructor (private http: Http) {}
-    private searchUrl = 'app/data/businesses.json';  // URL to web API
+    private searchUrl = 'http://localhost:3000/api/businesses';  // URL to web API
     getBusinesses(): Observable<Business[]> {
         return this.http.get(this.searchUrl)
             .map(this.extractData)

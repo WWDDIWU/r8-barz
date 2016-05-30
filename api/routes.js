@@ -19,25 +19,21 @@ router.get('/businesses', function(req, res) {
 
 router.post('/businesses', function(req, res) {
     const {
-        id,
         name,
         email,
-        hash,
-        salt,
-        checkIns,
-        location,
+        password,
+        latitude,
+        longitude,
         category,
         tags
     } = req.body;
 
     APIHandler.createBusiness({
-        id,
         name,
         email,
-        hash,
-        salt,
-        checkIns,
-        location,
+        password,
+        latitude,
+        longitude,
         category,
         tags
     }, (err, key) => {
@@ -51,27 +47,30 @@ router.post('/businesses', function(req, res) {
 
 router.post('/users', function(req, res) {
     const {
-        id,
-        name,
         email,
-        hash,
-        salt,
-        checkIns
+        password
     } = req.body;
 
     APIHandler.createUser({
-        id,
-        name,
         email,
-        hash,
-        salt,
-        checkIns
+        password
     }, (err, key) => {
         if (err) {
             res.status(401).send(err);
         } else {
             res.status(201).send(JSON.stringify(key));
         }
+    });
+
+
+    router.post('/login', function(req, res) {
+        APIHandler.login(req.body.email, req.body.password, (err, token) => {
+            if (err) {
+                res.status(401).send(err);
+            } else {
+                res.status(201).send(token);
+            }
+        });
     });
 });
 
