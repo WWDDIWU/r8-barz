@@ -8,9 +8,9 @@ import 'rxjs/add/operator/catch'
 export class LoginService {
     constructor (private http: Http) {}
     private loginUrl = 'api/login';  // URL to web API
-    login(username: string, password: string): Observable<any> {
+    login(email: string, password: string): Observable<any> {
         let creds = JSON.stringify({
-            'username': username,
+            'email': email,
             'password': password
         });
         return this.http.post(this.loginUrl, creds)
