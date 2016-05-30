@@ -32,7 +32,7 @@ describe('User - Testing getters, setters', function() {
 
         user.isBusiness().should.be.not.ok;
 
-        const userObj = user.getJSON();
+        const userObj = user;
         if (userObj.id === mock.id && userObj.name === mock.name && userObj.email === "test" && userObj.hash === mock.hash && userObj.salt === mock.salt) {
             (true === true).should.be.ok;
         } else {

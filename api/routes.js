@@ -61,16 +61,15 @@ router.post('/users', function(req, res) {
             res.status(201).send(JSON.stringify(key));
         }
     });
+});
 
-
-    router.post('/login', function(req, res) {
-        APIHandler.login(req.body.email, req.body.password, (err, token) => {
-            if (err) {
-                res.status(401).send(err);
-            } else {
-                res.status(201).send(token);
-            }
-        });
+router.post('/login', function(req, res) {
+    APIHandler.login(req.body.email, req.body.password, (err, token) => {
+        if (err) {
+            res.status(401).send(err);
+        } else {
+            res.status(201).send(token);
+        }
     });
 });
 
