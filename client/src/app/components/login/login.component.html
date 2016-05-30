@@ -1,0 +1,8 @@
+<md-card>
+    <md-card-title>Login</md-card-title>
+    <md-card-content>
+        <div><md-input #username placeholder="E-Mail"></md-input></div>
+        <div><md-input #password placeholder="Password" type="password"></md-input></div>
+        <button md-raised-button color="primary" (click)="login(username.value, password.value)">Login</button>
+    </md-card-content>
+</md-card>

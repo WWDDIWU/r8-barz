@@ -1,0 +1,11 @@
+<md-card *ngIf="business">
+   <md-card-subtitle>{{business.category}} - {{business.latitude}} / {{business.longitude}}</md-card-subtitle>
+   <md-card-title>{{business.name}}</md-card-title>
+   <md-card-content>
+        <p>Tags: <span class="tag" *ngFor="let tag of business.tags">{{tag}}</span></p>
+        <p>Checked in: <span class="checked-in" *ngFor="let checkedIn of business.checkIns">{{checkedIn}}</span></p>
+   </md-card-content>
+   <md-card-actions>
+        <button md-button>CHECK IN</button>
+   </md-card-actions>
+</md-card>

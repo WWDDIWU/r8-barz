@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Tequila Bar",
+		"latitude": "48.773544",
+		"longitude": "9.1744246",
+		"category": "bar",
+		"tags": ["tequila", "beer", "students"],
+		"check-ins": ["Peter", "Sebastian"]
+	},
+	{
+		"name": "Petrosilius",
+		"latitude": "48.7739878",
+		"longitude": "9.1688566",
+		"category": "restaurant",
+		"tags": ["food", "beer", "students", "studentenrabatt"],
+		"check-ins": []
+	},
+	{
+		"name": "Tahiti Bar",
+		"latitude": "48.7735029",
+		"longitude": "9.1731978",
+		"category": "bar",
+		"tags": ["sex", "naked", "beer", "studentenrabatt", "freifunk"],
+		"check-ins": []
+	}
+]
